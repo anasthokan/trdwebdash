@@ -1,0 +1,77 @@
+.users-container {
+  padding: 20px;
+  background: #f9fafb;
+  min-height: calc(100vh - 60px); /* respect header height */
+  overflow-y: auto;
+}
+
+.users-container h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.users-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.users-controls input,
+.users-controls select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px 15px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.users-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: blue;
+}
+
+.users-table tbody tr:hover {
+  background: #f3f4f6;
+}
+
+.users-container button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #1f2937;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.users-container button:hover {
+  background-color: #374151;
+}
+
+@media screen and (max-width: 768px) {
+  .users-controls {
+    flex-direction: column;
+  }
+}
