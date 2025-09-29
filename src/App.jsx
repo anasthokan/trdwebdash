@@ -18,6 +18,8 @@ import Logout from "./Logout";
 import ManageProducts from "./ManageProducts";
 import Giftcodes from "./Giftcodes";
 
+import Teams from "./Teams";
+
 function App() {
   return (
     <div className="grid-container">
@@ -40,6 +42,7 @@ function App() {
         <Route path="/logout" element={<Logout/>}/>
         <Route path="/giftcodes" element={<Giftcodes/>}/>
 
+         <Route path="/teams/:id" element={<Teams />} />
 
         {/* Add other routes if needed */}
       </Routes>
