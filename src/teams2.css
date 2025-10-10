@@ -1,0 +1,287 @@
+/* 🌐 Container for entire Teams Page */
+.teams-container {
+  padding: 20px 30px;
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🧭 Header (title + back button) */
+.teams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.teams-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.back-btn {
+  background: #111827;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #374151;
+}
+
+/* 🧱 Each Team Box */
+.team-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+}
+
+.team-section:hover {
+  transform: translateY(-2px);
+}
+
+/* 🏷️ Team Title */
+.team-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #fef08a, #fde68a);
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-count {
+  font-size: 13px;
+  color: #4b5563;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+/* 📋 Table styling */
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.team-table th,
+.team-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+}
+
+.team-table th {
+  font-weight: 600;
+  background: #f3f4f6;
+}
+
+.team-table tr:hover {
+  background: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+/* ⚠️ When no members found */
+.no-members {
+  color: #6b7280;
+  font-size: 14px;
+  font-style: italic;
+  margin: 8px 0 0 5px;
+}
+
+/* 🔘 Purchase History View Button */
+.view-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 💡 Responsive */
+@media (max-width: 768px) {
+  .team-table th,
+  .team-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .teams-header h3 {
+    font-size: 20px;
+  }
+
+  .back-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+.teams-container {
+  padding: 20px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.teams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teams-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.back-btn {
+  background: #1f2937;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.back-btn:hover {
+  background: #374151;
+}
+
+.team-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.team-title {
+  background: #fef9c3;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.team-table tr:hover {
+  background: #f3f4f6;
+}
+
+.no-members {
+  color: #6b7280;
+  font-style: italic;
+}
+
+
+.teams-container {
+  padding: 20px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.teams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teams-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.back-btn {
+  background: #1f2937;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.back-btn:hover {
+  background: #374151;
+}
+
+.team-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.team-title {
+  background: #fef9c3;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.team-table tr:hover {
+  background: #f3f4f6;
+}
+
+.view-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.view-btn:hover {
+  background: #1e40af;
+}

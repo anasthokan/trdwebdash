@@ -84,7 +84,7 @@ function ManageProducts() {
 
   const handleAddProduct = async () => {
     const { name, price, cycleType, cycleValue, daily, hour, image, badge, purchaseType } = productForm;
-
+console.log(productForm);
     if (!name || !price || !cycleValue || (cycleType === "day" && !daily) || (cycleType === "hour" && !hour)) {
       showMessage("Please fill all required fields!", "error");
       return;
@@ -104,7 +104,9 @@ function ManageProducts() {
 
     try {
       let product;
-      if (editingProductId) {
+
+      if (editingProductId!=null) {
+    
         product = await updateProduct(editingProductId, formData);
         setProducts(products.map(p => p._id === editingProductId ? product : p));
         setEditingProductId(null);
@@ -127,13 +129,15 @@ function ManageProducts() {
         purchaseType: "One time buy",
       });
     } catch (err) {
-      console.error(err);
+      console.log(err);
       showMessage(editingProductId ? "Failed to update product" : "Failed to add product", "error");
     }
   };
 
   const handleEdit = (product) => {
     setEditingProductId(product._id);
+   
+
     setSelectedCategory(product.categoryName);
     setProductForm({
       name: product.productName,
@@ -241,7 +245,7 @@ function ManageProducts() {
 
         <div>
           <label>Image</label>
-          <input type="file" name="image" accept="image/*" onChange={handleInputChange} />
+          <input type="file" name="image" accept="image/*" required onChange={handleInputChange} />
         </div>
 
         <div>
@@ -253,7 +257,7 @@ function ManageProducts() {
 
         <div>
           <label>Purchase Type</label>
-          <select name="purchaseType" value={productForm.purchaseType} onChange={handleInputChange}>
+          <select name="purchaseType" required value={productForm.purchaseType} onChange={handleInputChange}>
             <option value="One time buy">One time buy</option>
             <option value="All time">All time</option>
           </select>
@@ -285,7 +289,7 @@ function ManageProducts() {
                 const totalHour = Number(item.hourIncome || item.hour) * Number(item.cycleValue);
                 return (
                   <tr key={item._id}>
-                    <td>{item.imageUrl && <img src={`http://localhost:5000${item.imageUrl}`} alt={item.productName || item.name} width="50" />}</td>
+                    <td>{item.imageUrl && <img src={`http://localhost:5004${item.imageUrl}`} alt={item.productName || item.name} width="50" />}</td>
                     <td>{item.productName || item.name}</td>
                     <td>{item.categoryName || item.category}</td>
                     <td>{item.price}</td>
